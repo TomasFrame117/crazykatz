@@ -1,3 +1,19 @@
-*{
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: black;
     margin: 0;
+    margin-left: 800px;
+    margin-top: 300px;
+    border-radius: 50%;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3em;
+    color: rgb(172, 0, 0);
+    border-radius: 60%;
+    border-color: grey;
+
 }
