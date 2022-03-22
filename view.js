@@ -72,7 +72,6 @@ function ratingsPage(){
     <button>Page Left</button>
     <button onclick="ratingsWindow()">Rate</button>
 
-    
     <div class="container"> 
         <button class="homeMenu" onclick="homePage()">Hjem</button></br>
         <button class="homeMenu" onclick="ratingsPage()">Ratings</button></br>
@@ -100,7 +99,6 @@ function ratingsWindow() {
     <input type="radio"/>
     
     <button>Rate</button>
-    <button type="radio"></button>
 
     <div class="container"> <button class="homeMenu" onclick="homePage()">Hjem</button></br>
         <button class="homeMenu" onclick="ratingsPage()">Ratings</button></br>
@@ -132,7 +130,7 @@ function calendarPage(){
 function forumPage(){
     document.getElementById('app').innerHTML = `
     <div class="forumBox">
-    <input type="text"/>
+    
         <div> forumslide</div>
         <div> forumslide</div>
         <div> forumslide</div>
@@ -154,34 +152,44 @@ function forumPage(){
 }
 
 function infoPage(){
-   let html = `` ; 
-    html += `
-    
-    <p><pre>
-    Norsk skogkatt er en katterase som første gang ble anerkjent av FIFé i 1977, men som har røtter som går langt tilbake i tid. 
-    Som rase ble den skapt i Norge på 1930-tallet, men den er trolig mer vanlig i Sverige.
+   let html = `<p><pre>
+   Norsk skogkatt er en katterase som første gang ble anerkjent av FIFé i 1977, men som har røtter som går langt tilbake i tid. 
+   Som rase ble den skapt i Norge på 1930-tallet, men den er trolig mer vanlig i Sverige.
 
-    Opprinnelse og alder
-    Rasen har sin opprinnelse i de langhårete skaukattene som fantes i Skandinavia. De har vært kjent her i flere hundre år. 
-    Det er kjent at genmutasjonen som gir lang pels oppsto i området mellom Svartehavet og Kaspihavet, så kanskje var det vikingene som fraktet med seg
-    langhårede katter tilbake til Norden.
-    </pre>
-    </p>
+   Opprinnelse og alder
+   Rasen har sin opprinnelse i de langhårete skaukattene som fantes i Skandinavia. De har vært kjent her i flere hundre år. 
+   Det er kjent at genmutasjonen som gir lang pels oppsto i området mellom Svartehavet og Kaspihavet, så kanskje var det vikingene som fraktet med seg
+   langhårede katter tilbake til Norden.
+   </pre>
+   </p>
+   
+   <img height=100vh width=100vh class="infoCatImg" src="bilder/mainecoon.jpeg"/>
+   <img class="infoCatImg"/>
+   <img class="infoCatImg"></img>
+   
+   <div class="container"> 
+       <button class="homeMenu" onclick="homePage()">Hjem</button></br>
+       <button class="homeMenu" onclick="ratingsPage()">Ratings</button></br>
+       <button class="homeMenu" onclick="forumPage()">Katt Forum</button></br>
+       <button class="homeMenu" onclick="infoPage()">Info om katter</button></br>
+       <button class="homeMenu" onclick="humorPage()">Humor</button></br>
+       <button class="homeMenu" onclick="searchPage()">Søk</button></br></div>
+   `; 
+   for(let i = 0; i < model.chooseCat.length; i++){
+     html +=`<div class="cats">
+     Name: <img src="${model.chooseCat[i].image}"/>
+     
+     </div>`}
     
-    <img class="infoCatImg"></img>
-    <img class="infoCatImg"></img>
-    <img class="infoCatImg"></img>
     
-    <div class="container"> 
-        <button class="homeMenu" onclick="homePage()">Hjem</button></br>
-        <button class="homeMenu" onclick="ratingsPage()">Ratings</button></br>
-        <button class="homeMenu" onclick="forumPage()">Katt Forum</button></br>
-        <button class="homeMenu" onclick="infoPage()">Info om katter</button></br>
-        <button class="homeMenu" onclick="humorPage()">Humor</button></br>
-        <button class="homeMenu" onclick="searchPage()">Søk</button></br></div>
-    `;
+    // html +=`<div>`
+    // // for(let i = 0; i < model.chooseCat[i].length; i++) {
+    // //     html += `<img src="${model.chooseCat[i].image}">`
+    // // };
     
+    // html +=`</div>`
     document.getElementById('app').innerHTML = html;
+    updateView();
 }
 
 updateView();

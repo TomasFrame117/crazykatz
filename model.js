@@ -1,5 +1,5 @@
 let html = document.getElementById('app').innerHTML
-let model = {
+const model = {
     //app  
     app:{  
     currentPage: '',
