@@ -1,8 +1,9 @@
-
+let html = document.getElementById('app').innerHTML
 let model = {
     //app  
     app:{  
     currentPage: '',
+    innhold: '',
     currentUser: null,
     },
 

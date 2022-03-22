@@ -5,15 +5,40 @@ body {
     background-color: black;
     margin: 0;
     margin-left: 800px;
-    margin-top: 300px;
+    margin-top: 50px;
     border-radius: 50%;
+    color: white;
 }
 
 h1 {
-    margin: 0;
+    width: 19%;
+    margin-top: 50px;
+    border-style: dotted;
+    border-radius: 20%;
+    border-color: grey;
     font-size: 3em;
     color: rgb(172, 0, 0);
-    border-radius: 60%;
-    border-color: grey;
+    text-shadow: inset 1px 1px rgb(0, 0, 0), -1px -1px rgb(85, 1, 1);
 
+}
+
+button {
+    color: black;
+    background-color: rgb(172, 0, 0);
+    border-radius: 30%;
+    padding: 15px 32px;
+    font-size: 20px;
+    text-shadow: 20em;
+    text-align: center;
+    white-space: nowrap;
+    margin-top: 1em;
+    width: 10%;
+    height: 10%;
+}
+
+input {
+    background-color: rgba(236, 221, 221, 0.822);
+    margin-top: 1em;
+    width: 15%;
+    padding: 12px 20px
 }
