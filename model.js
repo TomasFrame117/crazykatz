@@ -4,7 +4,7 @@ const model = {
     app:{  
     currentPage: '',
     innhold: '',
-    currentUser: null,
+    currentUser: [],
     },
 
     //input
@@ -13,6 +13,8 @@ const model = {
         userPassword:'',
 
     regInfo:{
+        id: '',
+        username: '',
         regFirstName: '',
         regLastName: '',
         regPassword: '',
@@ -88,8 +90,8 @@ const model = {
     users:[
         {
             id:1,
-            firstName:'Per',
-            lastName:'Per',
+            firstName:'Inga',
+            lastName:'Toppen',
             password:'123456',
             mail: 'per@per.no',
             chosenCat:1,
