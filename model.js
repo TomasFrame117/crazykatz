@@ -1,10 +1,11 @@
-let html = document.getElementById('app').innerHTML
+let html = '';
 const model = {
     //app  
     app:{  
-    currentPage: '',
-    innhold: '',
-    currentUser: [],
+        currentPage: 'loginPage',
+        innhold: '',
+        currentUserName: "",
+        currentUserID: null,
     },
 
     //input
@@ -92,8 +93,8 @@ const model = {
             id:1,
             firstName:'Inga',
             lastName:'Toppen',
-            password:'123456',
-            mail: 'per@per.no',
+            password:'1',
+            mail: '1',
             chosenCat:1,
         },
         {
