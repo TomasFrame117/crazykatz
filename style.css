@@ -1,0 +1,267 @@
+
+*{
+  margin:0;
+}
+body {
+  background: linear-gradient(to right, #090907,#080806,#080806 );
+    color: white;  
+    width: 100vh;
+    height: 100vh;
+    
+}
+
+
+h1 {
+    text-align: center;
+    position: relative;
+    left: 50%;
+    font-size: 3em;
+    color: rgb(172, 0, 0);
+    text-shadow: inset 5px 6px rgb(0, 0, 0), -1px -1px rgb(85, 1, 1);
+   
+}
+
+.box {
+position: absolute;
+width: 350px;
+height: 500px;
+top:10%;
+left:50%;
+background: #353535;
+border: 1px solid #673B3B;
+box-sizing: border-box;
+border-radius: 24px;
+margin-left:-150px;
+margin-bottom:100px;
+
+}
+
+.log {
+  position: relative;
+  width: 250px;
+  height: 50px;
+  background: #FFFFFF;
+  border: 1px solid #FF4F4F;
+  box-sizing: border-box;
+  border-radius: 12px;
+  top:10%;
+  left:55%;
+  margin-left:-150px;
+  margin-bottom:100px;
+}
+h2 {
+  text-align: center;
+  font-size: 35px;
+  padding: 50px;
+}
+.log2{
+  position: relative;
+  width: 250px;
+  height: 50px;
+  background: #FFFFFF;
+  border: 1px solid #FF4F4F;
+  box-sizing: border-box;
+  border-radius: 12px;
+  bottom:10%;
+  left:55%;
+  margin-left:-150px;
+  margin-bottom:100px;
+  
+}
+.in {
+  border-color: rgb(172, 0, 0);
+  background: rgb(172, 0, 0);
+  color: white;
+  border-radius: 20px;
+  width: 125px;
+  height: 45px;
+  font-size: 20px;
+  justify-content: center;
+  bottom: 25%;
+  left: 30%;
+  position: relative;
+  
+}
+.reg {
+  border-color: rgb(172, 0, 0);
+  background: rgb(172, 0, 0);
+  color: black;
+  border-radius: 20px;
+  width: 125px;
+  height: 45px;
+  font-size: 20px;
+  justify-content: center;
+  bottom: 20%;
+  left: 30%;
+  position: relative;
+  color: white;
+ 
+}
+
+
+input {
+    background-color: rgba(236, 221, 221, 0.822);
+    margin-top: 1em;
+    margin-left: 800px;
+    width: 15%;
+    padding: 12px 20px
+}
+
+.infoText {
+  position:absolute ;
+  text-align: center;
+  margin-top: 50vh;
+  margin-left: 18%;
+  
+}
+
+.infoCatImg {
+  margin-left: 39%;
+  height: 40vh;
+  width: 40vh;
+  position: absolute;
+  top: 10%;
+  text-align: center;
+  
+}
+
+.rateButtons {
+  margin-left: 50%;
+  margin-top: 20%;
+}
+.rate{
+  position: relative;
+  left:50%;
+}
+
+.container{
+  color: white;
+  position: absolute;
+  background-color: rgb(172, 0, 0);
+  border-radius: 25px;
+  margin:10px;
+  font-size: 15px;
+  text-align: center;
+  width:100px;
+  height: 50px;
+  top:59px;
+  left:0%;
+  
+  
+}
+.homeMenu {
+  color: white;
+  background-color: #990202;
+  border-radius: 0px 20px 20px 0px;
+  font-size: 15px;
+  text-align: center;
+  border: 1px solid white;
+  margin-top: 0%;
+  width:150px;
+  height: 50px; 
+  margin-left: 0;
+}
+.myProfile {
+  color: white;
+  background-color: #990202;
+  border-radius: 0px 0px 20px 0px;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  margin-left: 0px;
+  margin-top: 0em;
+  width: 180px;
+  height: 70px;
+  position:absolute;
+  bottom: 100%;
+  border: 1px solid white;
+}
+
+.homeMenu:hover{
+  background-color: #E64C4C;
+  cursor: pointer;
+}
+
+.myProfile:hover{
+  background-color: #E64C4C;
+  cursor: pointer;
+}
+.blackC{
+  height:685px;
+  width: 250px;
+  
+  /* margin-top: -65px;  */
+  position: relative; 
+}
+.first {
+  clear: left; 
+  margin-left: 40%;
+}
+
+.Frist-container{
+  display:flex;
+}
+.pussyPics {
+  width: 110px;
+  height: 110px;
+  margin-left: 180%;
+  padding: 1px;
+  border: 2px solid #990202;
+  
+  
+  margin-top: 60%;
+}
+.pussyWinner:hover{
+  cursor: pointer;
+}
+.pussyPics:hover{
+  cursor: pointer;
+}
+
+.rateCatImg {
+  float: left; 
+}
+ .pussyWinner {
+  width: 110px;
+  height: 110px;
+  margin-left: 90%;
+  padding: 1px;
+  border: 2px solid #990202;
+  box-sizing: content-box; 
+}  
+.weeklyWin {
+  display: inline-flex;
+  position: relative;
+  justify-content: center;
+  
+  
+
+ }  
+.legg{ width: 80px;
+  margin-left: 50%;
+  margin-bottom: 20%;
+  
+  border: 2px solid #990202;
+  display: inline-block;
+  margin-bottom:20%;
+}
+.edit{ width: 80px;
+  height: 50px;
+  margin-left: 50%;
+  margin-bottom: 10%;
+  display: inline-block;
+  border: 2px solid #990202;
+  
+
+}
+.browse{ width: 80px;
+  height: 50px;
+  margin-left: 50%;
+  
+  border: 2px solid #990202;
+  display: inline-block;
+  margin-bottom: 10%;
+}
+.profileText {
+  text-align: center;
+}
