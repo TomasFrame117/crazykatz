@@ -8,13 +8,14 @@ if (side == 'loginPage') html = loginPage();
 if (side == 'regPage') html = regPage();
 if (side == 'myProfile') html = myProfile();
 if (side == 'homePage') html = homePage();
-//together
+if (side == 'infoPage') html = infoPage();
+
 if (side == 'ratingsPage') html = ratingsPage();   
 if (side == 'ratingsWindow') html = ratingsWindow(); 
 if (side == 'calendarPage') html = calendarPage();
 if (side == 'forumPage') html = forumPage();
 
-if (side == 'infoPage') html = infoPage();
+
 
 document.getElementById('app').innerHTML = html;
 } 
@@ -39,9 +40,9 @@ function mainMenu() {
 
 function loginPage() {
     html = `
-    <img class="blackC" src="bilder/black.jpg"/>
+    <img class="blackC" src="black.jpg"/>
     <div class="box">
-        <h2>Logg inn</h2>
+        <h2 class="Innlog">Logg inn</h2>
         <input class="log" type="text" onchange="model.input.userLogin = this.value" placeholder="E-post:"/> <br/>
         <input class="log2" type="password" onchange="model.input.userPassword = this.value" placeholder="Passord:"/><br/>
         <button class="in" onclick="logInUser()">Log inn</button></br>
@@ -49,16 +50,13 @@ function loginPage() {
     </div>`;
     
     return html;
-    
     }
-
-
 
 function homePage() {
     html = `${mainMenu()}`;
     html += `
-    <h1>Crazy Katz</h1>
-    <h1>Ukens Vinnere!</h1>
+    <h1 class="tema">CrazyCatPeople.no</h1>
+    <h2 class="headers">Ukens Vinnere!</h2>
     `;
     html +=`<div class"First-container">`
     for (let i = 0; i < model.chooseCat.length; i++) {
@@ -78,14 +76,17 @@ return html;
 function regPage(){
     // html = `${mainMenu()}`;
     html = `
-     <h1>Ny bruker</h1>
-     <input class="Uname1" type="text" placeholder="Fornavn:"/><br/>
-     <input class="Lname1" type="text" placeholder="Etternavn:"/></br>
-     <input class="UserEm1" type="text" placeholder="E-post:"/></br>
-     <input class="Upass1" type="text" placeholder="Passord:"/></br>
-     <input class="BUpass1" type="text" placeholder="Gjenta Passord:"/></br>
+     <div class="box"> <div class="Uname1">
+     <h1 class="Innlog">Ny bruker</h1>
+     <input type="text" placeholder="Fornavn:"/><br/>
+     <input type="text" placeholder="Etternavn:"/></br>
+     <input type="text" placeholder="E-post:"/></br>
+     <input type="text" placeholder="Passord:"/></br>
+     <input type="text" placeholder="Gjenta Passord:"/></br>
+     <input type="text" placeholder="Velg Katterase:"/></br></div>
 
-    <button class="reg1" onclick="changePage('loginPage')">Registrer</button></br>
+
+    <button class="reg1" onclick="changePage('homePage')">Registrer</button></br><div/>
     `;
     return html;
 }
@@ -93,7 +94,7 @@ function regPage(){
 function myProfile(){
     html = `${mainMenu()}`;
     html += `
-    <h1>Min profil</h1>
+    <h1 class="headers">Min profil</h1>
     <div class="profileText">
     <h3 class="prinfo">Profil informasjon</h3>
     <h3 class="profbilde">Legg til profil bilde</h3>
@@ -107,9 +108,6 @@ function myProfile(){
      <button class="edit" onclick="">Rediger</button>
      <button class="browse" onclick="">Browse</button>
      <button class="legg" onclick="">Legg til</button>
-
-     
-     
      `;
     
     return html;
@@ -130,6 +128,7 @@ function myProfile(){
 function ratingsPage(){
     html = `${mainMenu()}`;
     html += `
+    <h1 class="tema">CrazyCatPeople.no</h1>
     <img class="rateCatImg"></img>
 
     <div class="rateButtons">
@@ -187,15 +186,18 @@ function calendarPage(){
 function forumPage(){
     html = `${mainMenu()}`;
     html += `
-    <div class="forumBox">
+    <h1 class="tema">CrazyCatPeople.no</h1>
+    <h2 class="headers">Forum</h2>
+    <input class="searchBar" type="searchbar" placeholder="Søk..."/>
+    <div class="grid-container">
+  <div class="grid-item">1</div>
+  <div class="grid-item">2</div>
+  <div class="grid-item">3</div>
+  <div class="grid-item">4</div>
+  <div class="grid-item">5</div> 
+  
+  </div>
     
-        <div> forumslide</div>
-        <div> forumslide</div>
-        <div> forumslide</div>
-        <div> forumslide</div>
-        <div> forumslide</div>
-        <input class="searchBar" type="searchbar"/>
-    </div>
     
     `;
     //model.app.currentPage = 'homePage'
@@ -205,7 +207,8 @@ function forumPage(){
 function infoPage(){
     html = `${mainMenu()}`;
     html += `
-   <h1>Norsk Skogkatt</h1>
+   <h1 class="tema">CrazyCatPeople.no</h1>
+   <h1 class="headers">Norsk Skogkatt</h1>
    <div class="infoText"><pre>
    Norsk skogkatt er en katterase som første gang ble anerkjent av FIFé i 1977, 
    men som har røtter som går langt tilbake i tid. 
