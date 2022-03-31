@@ -1,47 +1,66 @@
-// function godkjenLogin(){
-//     if (userName != 'Terje'){
-//         alert('Feil bruker!')  
-//     }
-//     show();  
-// }
-
-// var userIndex = [];
-// var userName = model.users[i].mail.value;
-// var userPassword = model.users[i].password.value;
-
 function changePage(side) {
     model.app.currentPage = side;
     model.app.innhold = '';
     updateView();
 }
+function logInUser() {
+    model.users.forEach((users, index) => {
+       let currentUser = model.users[index];
+       console.log(currentUser);
+        if(currentUser.mail == model.input.userLogin 
+         && currentUser.password == model.input.userPassword) {
+         // setter current user til den innloggede brukeren
+          model.app.currentUserName = model.users[index].firstName;
+          model.app.currentUserID = model.users[index].id;
+          model.app.currentPage = "homePage";
+          //kalle på view
+           updateView();
+         console.log(model.users[index]);
+         //sette hvilken side 
+         }
+        //   else{(model.users.mail == 0  && model.users.password == 0);
+        //     alert("Nice try");
+        //         return false;
+        //     }
+        //     return true;
+     })
 
-function logInUser() {    
-    for(let i = 0; i < model.users.length; i++){
-       if(model.users[i].mail == model.input.userLogin  && model.users[i].password == model.input.userPassword) {
-        
-        // setter current user til den innloggede brukeren
-        model.currentUserName = model.users[i].firstName;
-        model.currentUserID = model.users[i].id;
-           
-        //sette hvilken side 
-        model.app.currentPage = "homePage";
-       //kalle på view
-            updateView();
-        }
-        else{(model.users[i].mail == ''  && model.users[i].password == '');
-          alert("ALERT");
-              return false;
-          }
-          return true;
-    }
 }
 
-function newUser(){
-    for (let i = 0; i < model.users.length; i++){
+ function NewUser() {
+   let newUser = {};
         
-    }
+   newUser.id = model.userId,
+   newUser.firstName = model.input.regInfo.regFirstName,
+   newUser.lastName = model.input.regInfo.regLastName, 
+   newUser.mail = model.input.regInfo.regMail, 
+   newUser.password = model.input.regInfo.regPassword,    
+   newUser.password = model.input.regInfo.regConfirmPW,
+   newUser.chosenCat = model.input.regInfo.regSelectBreed,
+    
+    model.userId++;
+    model.users.push(newUser);
+
+    //  model.app.currentPage = "homePage";
+     updateView();
+ }
+
+ function EditUser() {
+    let newUser = {};
+         
+    newUser.id = model.userId,
+    newUser.firstName = model.input.regInfo.regFirstName,
+    newUser.lastName = model.input.regInfo.regLastName, 
+    newUser.mail = model.input.regInfo.regMail, 
+    newUser.password = model.input.regInfo.regPassword,    
+    newUser.password = model.input.regInfo.regConfirmPW,
+    newUser.chosenCat = model.input.regInfo.regSelectBreed,
+     
+     model.userId++;
+     model.users.push(newUser);
+ 
+     //  model.app.currentPage = "homePage";
+      updateView();
+  }
 
 
-    model.app.currentPage = "regPage";
-    updateView();
-}
