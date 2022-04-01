@@ -58,6 +58,7 @@ function regPage(){
     
     <div class="page">
     <img class="blackcorner" src="https://wallpaperaccess.com/full/105676.jpg"/>
+    
     <div class="container">
     <h1 class="hreg">Lag ny bruker</h1><br/>
     <div class="regContainer">
@@ -90,7 +91,7 @@ function homePage() {
     html = `
     <div class="page">
         <div class="header">
-             <h1 class="title">CrazyCatPeople.no</h1>
+             <h1 class="title1">CrazyCatPeople.no</h1>
              <button class="calendarBtn" onclick="changePage('calendarPage')">Kalender</button>
         </div>
         <div class="menu">${mainMenu()}
@@ -123,27 +124,28 @@ function myProfile(){
             </div>
 
     <div class="mainContent">
-    <img class="catBg" src="https://img.wallpapic.com/i9591-945-139/medium/katter-svart-katt-svarte-morket-bakgrunn.jpg"></img>
-        <div class="profileContainer">
-            <h3 class="profTitle">Profil informasjon</h3>
-            <h3 class="profImgLoad">Legg til profil bilde</h3>
-            <div class="mainContent">
+    
+        <div class="profileContainar">
+            <h3 class="profTitle">Profilinformasjon</h3>
+            
+            
                 <input class="ab" type="text" onchange="" placeholder="Fornavn:"/><br>
                 <input class="cd" type="text" placeholder="Etternavn:"/><br>
                  <input class="ef" type="text" placeholder="E-post:"/><br>
                  <input class="gh" type="text" placeholder="Passord:"/><br>
                  <input class="ij" type="text" placeholder="Gjenta Passord:"/> <br>
-                <button class="edit" onclick="">Rediger</button><br>
-                <div class="profPicContainer"
-                <button class="browse" onclick="">Browse</button><br>
-                <button class="legg" onclick="">Legg til</button><br>
+                <button class="edit" onclick="">Rediger</button>
+                
+                <button class="legg" onclick="">Legg til profilbilde</button>
+                
+                <img class="blackCorn" src="https://media.istockphoto.com/photos/furry-british-cat-white-color-on-isolated-black-background-picture-id813499684?k=20&m=813499684&s=612x612&w=0&h=KYoDrE307ne0Emr3md0mbaKHmeor-E9bGA_gr4n08Tc=">
+                <img class="catBg" src="https://img.wallpapic.com/i9591-945-139/medium/katter-svart-katt-svarte-morket-bakgrunn.jpg"></img>
+                </div>
+                </div>
                 </div>
                 
-        </div>
-        </div>
-     </div>
-     
-     `;
+                `;
+                // <button class="browse" onclick="">Browse</button><br>
     
     return html;
 }
@@ -160,21 +162,21 @@ function ratingsPage() {
     `;
 
     for (let i = 0; i < model.chooseCat.length; i++) {
-        let first = i % 3 == 0 ? 'first' : '';
+        // let first = i % 3 == 0 ? 'first' : ''; ${first}
         html += `
-        <button class="rtbtn" onclick="model.input.selectedCatId = ${i};  changePage('ratingsWindow')">Rate</button></br>
-        <div class="rateCatImg ${first}">
-        <img class="pussyPics" src="${model.chooseCat[i].image}"><br>
-        <div>${model.chooseCat[i].ratingInfo.rateOverall}</div>
-        
-        </img>
+        <div class="rateCatImg">
+            <img class="pussyPics" src="${model.chooseCat[i].image}"/>
+            <div>${model.chooseCat[i].ratingInfo.totalrating}</div>
+            <button class="rtbtn" onclick="model.input.selectedCatId = ${i};  changePage('ratingsWindow')">Rate</button>
         </div>
+
+        
         `;
     }
     html += `
         <div class="LRButtons">
-            <button>Page Left</button>
-            <button>Page Right</button></br>
+            <button class="left">Page Left</button>
+            <button class="right">Page Right</button>
                 
         </div>
     </div>
@@ -213,7 +215,7 @@ function ratingsWindow() {
     
             </br>
     
-            <button class="rate" onclick=" saveRating(); changePage('ratingsPage')">Rate</button>
+            <button class="rate" onclick=" saveRating(); makeRatings(); changePage('ratingsPage')">Rate</button>
         
         </div>
     </div>
@@ -251,36 +253,47 @@ function saveRating(){
 
 }
 function makeRatings(){
-    for(let i = 0; i < model.chooseCat[i].ratingInfo.rateTail.length; i++){
-        let sum =  model.chooseCat[i].ratingInfo.rateTail.reduce((partialSum, a) => partialSum + a, 0);
-        sum = sum/model.chooseCat[i].ratingInfo.rateTail.length;
+    let id = model.input.selectedCatId
+    let totalsum = 0;
+    for(let i = 0; i < model.chooseCat[id].ratingInfo.rateTail.length; i++){
+        let sum =  model.chooseCat[id].ratingInfo.rateTail.reduce((partialSum, a) => partialSum + a, 0);
+        sum = sum/model.chooseCat[id].ratingInfo.rateTail.length;
          console.log(sum)
+         totalsum += sum
      }
-     for(let i = 0; i < model.chooseCat[i].ratingInfo.rateFur.length; i++){
-        let sum =  model.chooseCat[i].ratingInfo.rateFur.reduce((partialSum, a) => partialSum + a, 0);
-        sum = sum/model.chooseCat[i].ratingInfo.rateFur.length;
+     for(let i = 0; i < model.chooseCat[id].ratingInfo.rateFur.length; i++){
+        let sum =  model.chooseCat[id].ratingInfo.rateFur.reduce((partialSum, a) => partialSum + a, 0);
+        sum = sum/model.chooseCat[id].ratingInfo.rateFur.length;
          console.log(sum)
+         totalsum += sum
      }
-     for(let i = 0; i < model.chooseCat[i].ratingInfo.rateHead.length; i++){
-        let sum =  model.chooseCat[i].ratingInfo.rateHead.reduce((partialSum, a) => partialSum + a, 0);
-        sum = sum/model.chooseCat[i].ratingInfo.rateHead.length;
+     for(let i = 0; i < model.chooseCat[id].ratingInfo.rateHead.length; i++){
+        let sum =  model.chooseCat[id].ratingInfo.rateHead.reduce((partialSum, a) => partialSum + a, 0);
+        sum = sum/model.chooseCat[id].ratingInfo.rateHead.length;
          console.log(sum)
+         totalsum += sum
      }
-     for(let i = 0; i < model.chooseCat[i].ratingInfo.rateColor.length; i++){
-        let sum =  model.chooseCat[i].ratingInfo.rateColor.reduce((partialSum, a) => partialSum + a, 0);
-        sum = sum/model.chooseCat[i].ratingInfo.rateColor.length;
+     for(let i = 0; i < model.chooseCat[id].ratingInfo.rateColor.length; i++){
+        let sum =  model.chooseCat[id].ratingInfo.rateColor.reduce((partialSum, a) => partialSum + a, 0);
+        sum = sum/model.chooseCat[id].ratingInfo.rateColor.length;
          console.log(sum)
+         totalsum += sum
      }
-     for(let i = 0; i < model.chooseCat[i].ratingInfo.rateEars.length; i++){
-        let sum =  model.chooseCat[i].ratingInfo.rateEars.reduce((partialSum, a) => partialSum + a, 0);
-        sum = sum/model.chooseCat[i].ratingInfo.rateEars.length;
+     for(let i = 0; i < model.chooseCat[id].ratingInfo.rateEars.length; i++){
+        let sum =  model.chooseCat[id].ratingInfo.rateEars.reduce((partialSum, a) => partialSum + a, 0);
+        sum = sum/model.chooseCat[id].ratingInfo.rateEars.length;
          console.log(sum)
+         totalsum += sum
      }
-     for(let i = 0; i < model.chooseCat[i].ratingInfo.rateOverall.length; i++){
-        let sum =  model.chooseCat[i].ratingInfo.rateOverall.reduce((partialSum, a) => partialSum + a, 0);
-        sum = sum/model.chooseCat[i].ratingInfo.rateOverall.length;
+     for(let i = 0; i < model.chooseCat[id].ratingInfo.rateOverall.length; i++){
+        let sum =  model.chooseCat[id].ratingInfo.rateOverall.reduce((partialSum, a) => partialSum + a, 0);
+        sum = sum/model.chooseCat[id].ratingInfo.rateOverall.length;
          console.log(sum)
+         totalsum += sum
      }
+     //totalsum = totalsum/6;
+     model.chooseCat[id].ratingInfo.totalrating = totalsum;
+
 }
 
 function forumPage() {
@@ -296,13 +309,14 @@ function forumPage() {
             <input class="searchBar" type="text" placeholder="Søk..."/>
     
               <div class="forumContainer">
-            <div class="grid-item">1</div>
-            <div class="grid-item">2</div>
-            <div class="grid-item">3</div>
-            <div class="grid-item">4</div>
-            <div class="grid-item">5</div> 
+            <div class="grid-item">Vi har en jentepus på 2.5 år. Hun er svært lite kosete...<button class="a1">Les mer</button></div>
+            <div class="grid-item">Kan katten høre at det er eieren som kommer gående?<button class="a1">Les mer</button></div>
+            <div class="grid-item">Hvorfor hater katter å få vann på seg?<button class="a1">Les mer</button></div>
+            <div class="grid-item">Hvor fort kan en katt løpe?<button class="a1">Les mer</button></div>
+            <div class="grid-item">Hvor langt går katter?<button class="a1">Les mer</button></div> 
              </div>
-    
+             <img class="forumCat" src="https://media.istockphoto.com/photos/cat-picture-id465391017?k=20&m=465391017&s=612x612&w=0&h=H8qvhyq4whmRtUgA0kj3MpPhhORYFDP4w2nbWiWDxbo="/>
+             <img class="CatForum" src="https://www.westend61.de/images/0000367126j/portrait-of-tabby-kitten-felis-silvestris-catus-in-front-of-black-background-MJOF000084.jpg"/>
   </div>
     `;
 
@@ -319,7 +333,7 @@ function infoPage() {
         </div>
 
    <div class="mainContent">
-        <img class="infoCatImg" src="bilder/skogkatt.jpg"/>
+        <img class="infoImg" src="bilder/skogkatt.jpg"/>
 
         <div class="infoCat"><pre>
         Norsk skogkatt er en katterase som første gang ble anerkjent av FIFé i 1977, 
@@ -348,12 +362,13 @@ function humorPage() {
     html = `
     <div class="page">
         <div class="header">
-            <h1 class="title">Humor</h1>
+            <h1 class="title">Humor (work in progress)</h1>
             </div>
         <div class="menu">${mainMenu()}
             </div>
         <div class="mainContent">
                 <p>Humor</p>
+    <img class="another" src="https://s1.1zoom.me/big0/132/Cats_Black_background_White_Glance_526523_682x1024.jpg"/>
             </div>
     </div>
    `; 

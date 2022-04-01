@@ -2,7 +2,7 @@ let html = '';
 const model = {
     //app  
     app: {
-        currentPage: 'homePage',
+        currentPage: 'loginPage',
         innhold: '',
         currentUserName: "",
         currentUserID: null,
@@ -130,6 +130,7 @@ const model = {
                 rateColor: [],
                 rateEars: [],
                 rateOverall: [],
+                totalrating: 0,
                 maxPoints: 100,      
 
             },
@@ -147,6 +148,7 @@ const model = {
                 rateColor: [],
                 rateEars: [],
                 rateOverall: [],
+                totalrating: 0,
                 maxPoints: 100,
             },
         },
@@ -162,6 +164,7 @@ const model = {
                 rateColor: [],
                 rateEars: [],
                 rateOverall: [],
+                totalrating: 0,
                 maxPoints: 100,
             },
         },
@@ -177,6 +180,7 @@ const model = {
                 rateColor: [],
                 rateEars: [],
                 rateOverall: [],
+                totalrating: 0,
                 maxPoints: 100,
             },
         },
@@ -192,6 +196,7 @@ const model = {
                 rateColor: [],
                 rateEars: [],
                 rateOverall: [],
+                totalrating: 0,
                 maxPoints: 100,
             },
         },
@@ -207,6 +212,7 @@ const model = {
             rateColor: [],
             rateEars: [],
             rateOverall: [],
+            totalrating: 0,
             maxPoints: 100,
         },
         },
