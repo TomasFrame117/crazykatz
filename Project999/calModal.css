@@ -1,0 +1,29 @@
+.modalContainer{
+    height: 60vh;
+    width: 51vw;
+    top:10vh;
+    left:15vw;
+    display:grid;
+    position: fixed;
+    grid-template-columns:20% 80%;
+    grid-template-rows: 20% 80%; 
+    grid-template-areas:
+                         'mainContent mainContent'
+                         'footer footer';
+     background-color: whitesmoke;
+     z-index: 150;
+     border-radius: 3px;
+}
+.mainContentModal{
+    grid-area: mainContent;
+    position:relative;   
+}
+.modalheader{
+grid-area: headderModal;
+}
+.closeCal{
+    grid-area: footer;
+    text-align: center;
+    margin-left: 28vh;
+    margin-top: 1vh;
+}
