@@ -2,10 +2,11 @@ let html = "";
 const model = {
   //app
   app: {
-    currentPage: "homePage",
-    innhold: "",
+    currentPage: "ratingsPage",
+    // innhold: "",
     currentUserName: "",
     currentUserID: null,
+
   },
 
   //input

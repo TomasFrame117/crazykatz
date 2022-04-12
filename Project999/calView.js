@@ -1,5 +1,4 @@
 function openModal() {
-
   html = `
     <div class="modalContainer">
     <div class="mainContentModal">
@@ -13,11 +12,6 @@ function openModal() {
     </div>
     </div>
                   `;
-  html += `
-    <div class="header">
-    <h1></h1>
-            </div>
-            `;
 
   
   model.modal = html;

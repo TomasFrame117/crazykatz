@@ -10,11 +10,15 @@ function updateView() {
   if (side == "ratingsPage") html = ratingsPage();
   if (side == "ratingsWindow") html = ratingsWindow();
   if (side == "uploadPage") html = uploadPage();
-  if (side == "calendarPage") html = calendarPage();
+  
   if (side == "forumPage") html = forumPage();
-
   if (side == "humorPage") html = humorPage();
   if (side == "infoPage") html = infoPage();
+
+  if (side == "norskSkogKatt") html = norskSkogKatt();
+  if (side == "Siameser") html = Siameser();
+  if (side == "Curl") html = Curl();
+  if (side == "Ragdoll") html = Ragdoll();
 
   document.getElementById("app").innerHTML = html;
 }
@@ -43,12 +47,7 @@ function mainMenu() {
         
     `;
 }
-function calendarPage() {
-  html += `<div id="calendar"></div>`
-  calendar.render();
-  
-          return html;
-}
+
 function uploadPage() {
   html = `
   <div class="page">
@@ -66,7 +65,6 @@ function uploadPage() {
         </form>
   
           </div>
-  </div>`
- ;
-return html;
+  </div>`;
+  return html;
 }

@@ -8,7 +8,7 @@ function homePage() {
   
     for (let i = 0; i < model.images.length; i++) {
       html += `
-      
+     
       <input type="checkbox" id="pic-1"/>
       <label for="pic-1" class="lightbox"><img src="${model.images[i].NorskSkogKatt}"></img></label>
       <input type="checkbox" id="pic-2"/>
@@ -30,7 +30,7 @@ function homePage() {
         <label for="pic-5" class="grid-item1"><img class="img5" src="${model.images[i].ScottishFold}"></img></label>
         <label for="pic-6" class="grid-item1"><img class="img6" src="${model.images[i].Siamese}"></img></label>
         </div>
-  
+      
   
       
     

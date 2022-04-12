@@ -4,20 +4,19 @@ function myProfile() {
           <div class="header">
           <h1 class="title">Min profil</h1>
           </div>
-              <div class="menu">${mainMenu()}
-              </div>
+              <div class="menu">${mainMenu()}</div>
   
       <div class="mainContent">
       
           <div class="profileContainar">
-              <h3 class="profTitle">Profilinformasjon</h3>
+              <h3 class="profTitle">Profil informasjon</h3>
               
               
                   <input class="ab" type="text" onchange="model.app.currentUserName = this.value" placeholder="Fornavn:"/><br>
                   <input class="cd" type="text" placeholder="Etternavn:"/><br>
                    <input class="ef" type="text" placeholder="E-post:"/><br>
-                   <input class="gh" type="text" placeholder="Passord:"/><br>
-                   <input class="ij" type="text" placeholder="Gjenta Passord:"/> <br>
+                   <input class="gh" type="password" placeholder="Passord:"/><br>
+                   <input class="ij" type="password" placeholder="Gjenta Passord:"/> <br>
                   <button class="edit" onclick="EditUser()">Rediger</button>
                   
                   <button class="legg" onclick="">Legg til profilbilde</button>

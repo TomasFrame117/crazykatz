@@ -128,3 +128,6 @@
             margin-left:15%;
             margin-top:40%;     
         }
+        button:hover{
+            cursor: pointer;
+        }

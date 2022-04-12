@@ -1,6 +1,6 @@
 function changePage(side) {
   model.app.currentPage = side;
-  model.app.innhold = "";
+  // model.app.innhold = "";
   updateView();
 }
 function logInUser() {
@@ -95,3 +95,5 @@ function errorHandler(event) {
 function abortHandler(event) {
   _("status").innerHTML = "Upload Aborted";
 }
+
+
