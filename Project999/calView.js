@@ -38,7 +38,7 @@ function initCalander(){
      
       events: [
         {
-          title: 'Pussy Party',
+          title: 'Cat Party',
           start: '2022-04-04',
           constraint: 'businessHours',
           color: 'red',
@@ -55,7 +55,7 @@ function initCalander(){
           end: '2020-09-20'
         },
         {
-          title: 'Party',
+          title: 'Cat Exposition',
           start: '2020-09-29T20:00:00'
         },
 

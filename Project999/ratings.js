@@ -15,7 +15,7 @@ function ratingsPage() {
     html += `
           <div class="rateCatImg">
               <img class="pussyPics" src="${model.chooseCat[i].image}"/>
-              <div class="TotalScore">Pussy Score:${model.chooseCat[i].ratingInfo.totalrating}</div>
+              <div class="TotalScore">Rating:${model.chooseCat[i].ratingInfo.totalrating}</div>
               <div><button class="rtbtn" onclick="model.input.selectedCatId = ${i};  changePage('ratingsWindow')">Rate</button>
           </div>
             </div>
@@ -40,7 +40,7 @@ function ratingsWindow() {
     html += `
           <div class="rateCatImg">
               <img class="pussyPics" src="${model.chooseCat[i].image}"/>
-              <div class="TotalScore">Pussy Score:${model.chooseCat[i].ratingInfo.totalrating}</div>
+              <div class="TotalScore">Rating:${model.chooseCat[i].ratingInfo.totalrating}</div>
               <div><button class="rtbtn" onclick="model.input.selectedCatId = ${i};  changePage('ratingsWindow')">Rate</button>
               </div></div>
   
@@ -195,3 +195,6 @@ function makeRatings() {
   //totalsum = totalsum/6;
   model.chooseCat[id].ratingInfo.totalrating = totalsum;
 }
+
+ 
+  

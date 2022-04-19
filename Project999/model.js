@@ -2,8 +2,7 @@ let html = "";
 const model = {
   //app
   app: {
-    currentPage: "ratingsPage",
-    // innhold: "",
+    currentPage: "homePage",
     currentUserName: "",
     currentUserID: null,
 
@@ -33,6 +32,7 @@ const model = {
     forum: {
       search: "",
       textBox: "",
+      msg:[''],                       
     },
 
     upload: {
@@ -55,6 +55,8 @@ const model = {
     },
   },
   //data
+
+
   images: [
     {
       NorskSkogKatt: [

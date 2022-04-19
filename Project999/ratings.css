@@ -147,9 +147,10 @@
         color:#990202;
     }
 .ratingT{
-    font-size: 2vh;
+    font-size: 3vh;
     font-weight: bold;
-    color:#990202;
+    color:whitesmoke;
+    text-shadow: 2px 1px 1px #ff4f4f;
     text-align: left;
     margin:0;
 } 

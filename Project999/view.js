@@ -19,11 +19,21 @@ function updateView() {
   if (side == "Siameser") html = Siameser();
   if (side == "Curl") html = Curl();
   if (side == "Ragdoll") html = Ragdoll();
-
+  /*/HumorPage/*/
+  if (side == "fnyvideos") html = fnyvideos();
+  if (side == "fnypix") html = fnypix();
+  if (side == "hmr1") html = hmr1();
+  if (side == "hmr2") html = hmr2();
+  if (side == "hmr3") html = hmr3();
+  /*/ForumPages/*/
+  if (side == "frm1") html = frm1();
+  if (side == "frm2") html = frm2();
+  if (side == "frm3") html = frm3();
+  if (side == "frm4") html = frm4();
+  if (side == "frm5") html = frm5();
   document.getElementById("app").innerHTML = html;
 }
-
-mainMenu();
+  mainMenu();
 function mainMenu() {
   return `
   ${model.modal}      
@@ -42,7 +52,7 @@ function mainMenu() {
         <time onclick="openModal()" datetime="2022-04-04" class="icon">04/04/22
         <em>Kalender</em>
         <strong>Events</strong>
-        <span>08</span></time>
+        <span>19</span></time>
        
         
     `;
@@ -56,7 +66,7 @@ function uploadPage() {
           </div>
       <div class="menu">${mainMenu()}</div>
       <div class="mainContent">
-        <h2>Show Us Your Pussy!</h2>
+        <h2>Del dine bilder!</h2>
           <form id="upload_form" enctype="multipart/form-data" method="post">
            <input type="file" name="file1" id="file1" onchange="uploadFile()"><br>
             <progress id="progressBar" value="0" max="100" style="width:300px;"></progress>
@@ -67,4 +77,7 @@ function uploadPage() {
           </div>
   </div>`;
   return html;
+}
+function _(app){
+  return document.getElementById('app');
 }
