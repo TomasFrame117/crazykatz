@@ -1,6 +1,5 @@
 function loginPage() {
     html = ` 
-      
       <div class="page">
       <img class="black2" src="https://cdn.99images.com/photos/wallpapers/animals-birds/cat%20android-iphone-desktop-hd-backgrounds-wallpapers-1080p-4k-lgpsk.jpg"/>
       <img class="black" src="https://cdn.99images.com/photos/wallpapers/animals-birds/cat%20android-iphone-desktop-hd-backgrounds-wallpapers-1080p-4k-lgpsk.jpg"/>
@@ -20,7 +19,6 @@ function loginPage() {
   /*/REGPAGE/*/
   function regPage() {
     html = `
-      
       <div class="page">
       <img class="blackcorner" src="https://wallpaperaccess.com/full/105676.jpg"/>
       
@@ -43,7 +41,7 @@ function loginPage() {
          <option value="AB">Ragdoll</option>
          </select></br>
          </div>
-         <button class="reg" onclick="changePage('loginPage', NewUser())">Registrer</button></br>
+         <button class="reg" onclick="changePage('loginPage'); NewUser()">Registrer</button></br>
          
        </div>
      </div>
@@ -51,3 +49,28 @@ function loginPage() {
   
     return html;
   }
+/*
+<div class="page">
+      <img class="blackcorner" src="https://wallpaperaccess.com/full/105676.jpg"/>
+      
+      <div class="container">
+      <h1 class="hreg">Lag ny bruker</h1><br/>
+      <div class="regContainer">
+     
+          <input class="BUpass1" type="text" onchange="model.input.regInfo.regConfirmPW = this.value" placeholder="Gjenta Passord:"/></br>
+         
+         <select onchange="model.input.regInfo.regSelectBreed" class="selecto0r" name="kattid" >
+         <option selected="" value="Default">Velg katterase</option>
+         <option value="AF">Norsk Skogkatt</option>
+         <option value="AL">Siameser</option>
+         <option value="DZ">American Curl Langhår</option>
+         <option value="AS">Maine coon</option>
+         <option value="AD">Scottish Fold</option>
+         <option value="AB">Ragdoll</option>
+         </select></br>
+         </div>
+         <button class="reg" onclick="changePage('loginPage', NewUser())">Registrer</button></br>
+         
+       </div>
+     </div>*/
+  

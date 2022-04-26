@@ -1,5 +1,4 @@
 function openModal() {
-
   html = `
     <div class="modalContainer">
     <div class="mainContentModal">
@@ -13,15 +12,8 @@ function openModal() {
     </div>
     </div>
                   `;
-  html += `
-    <div class="header">
-    <h1></h1>
-            </div>
-            `;
 
-  
   model.modal = html;
-  
   
   updateView();
   initCalander();
@@ -44,26 +36,36 @@ function initCalander(){
      
       events: [
         {
-          title: 'Pussy Party',
-          start: '2022-04-04',
+          title: 'Cat Gathering',
+          start: '2022-05-04',
           constraint: 'businessHours',
           color: 'red',
         },
         {
-          title: 'Meeting',
-          start: '2022-04-13T11:00:00',
+          title: 'Cat Conference',
+          start: '2022-04-04',
+          constraint: 'businessHours',
+          color: 'blue',
+        },
+        {
+          title: 'Cat Breeding Seminar at Bleserfjeld Panorama Apartments',
+          start: '2022-04-17T11:00:00',
           constraint: 'availableForMeeting', // defined below
           color: '#257e4a'
         },
         {
-          title: 'Conference',
-          start: '2022-04-22',
+          title: 'Celebrate!!',
+          start: '2022-04-29',
           end: '2020-09-20'
         },
         {
-          title: 'Party',
-          start: '2020-09-29T20:00:00'
+          title: 'Åpen Dag',
+          start: '2022-04-28T10:35:00',
+          end: '12:00:00',
+          color:'blue',
+         
         },
+    
 
         // areas where "Meeting" must be dropped
         {
@@ -73,7 +75,7 @@ function initCalander(){
           display: 'background'
         },
         {
-          groupId: 'availableForMeeting',
+          groupId: 'available ',
           start: '2020-09-13T10:00:00',
           end: '2020-09-13T16:00:00',
           display: 'background'
@@ -97,7 +99,6 @@ function initCalander(){
       ]
     });
   calendar.render();
-
 }
 
 function closeModal() {

@@ -106,12 +106,7 @@ body::-webkit-scrollbar{
     text-shadow:2px 2px rgb(0, 0, 0), -1px -1px #FF4F4F;
     
 }
-.blackCorn{
-    position: relative;
-    margin:0;
-    margin-top:-24%;
-    left:-180%;
-}
+
 .Uname1{
     position: absolute;
     width: 250px;

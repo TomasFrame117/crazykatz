@@ -1,30 +1,181 @@
 /*/Info om katter/*/
+.norskSkog{
+    background-image: url(https://rajaamajid.files.wordpress.com/2014/10/sweet6.jpg?w=600);
+    width: 30vh;
+    height: 34vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius:2vh;
+    border: 0.5vh solid #DA635D;
+}
+
+
+.skogtxt{
+    color:#990202;
+    background-color: #FF4F4F;
+    width:fit-content;
+    height:fit-content;
+    font-size:2.2vh;
+    border: 0.2vh solid #990202;
+    border-radius:0.4vh;
+    position: absolute;
+  top: 59vh;
+  left: 41vh;
+    width:fit-content;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+    
+
+}
+.siameseJPG{
+    background-image: url(https://indienikole.com/img/lifestyle/14/get-know-siamese.jpg);
+    width: 30vh;
+    height: 34vh;
+    background-repeat: no-repeat;
+    border-radius:2vh;
+    background-size:cover;
+    border: 0.5vh solid #DA635D;
+}
+
+.siamestxt{
+    color:#990202;
+    background-color: #FF4F4F;
+    width:fit-content;
+    height:fit-content;
+    font-size:2.2vh;
+    border: 0.2vh solid #990202;
+    border-radius:0.4vh;
+    position: absolute;
+  top: 59vh;
+  left: 72vh;
+
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+    
+
+}
+
+.curlJPG{
+    background-image: url(https://cf.ltkcdn.net/cats/images/std/258488-800x515r1-american-curl-cat-breed-profile.jpg);
+    width: 30vh;
+    height: 34vh;
+    background-repeat: no-repeat;
+    border-radius:2vh;
+    background-size:cover;
+    border: 0.5vh solid #DA635D;
+    position: relative;
+}
+
+.Curltxt{
+    color:#990202;
+    background-color: #FF4F4F;
+    width:fit-content;
+    height:fit-content;
+    font-size:2.2vh;
+    border: 0.2vh solid #990202;
+    border-radius:0.4vh;
+    position: absolute;
+  top: 33vh;
+  left: 15vh;
+
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+    
+
+}
+.ragdollJPG{
+    background-image: url(https://thumbs.dreamstime.com/b/awesome-ragdoll-cat-beautiful-cushion-adorable-ragdoll-cat-beautiful-cushion-172354412.jpg);
+    width: 30vh;
+    margin: 10%;
+    margin-top: 10%;
+    margin-left: 0%;
+    height: 34vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius:2vh;
+    border: 0.5vh solid #DA635D;
+}
+
+.Ragdolltxt{
+    color:#990202;
+    background-color: #FF4F4F;
+    width:fit-content;
+    height:fit-content;
+    font-size:2.2vh;
+    border: 0.2vh solid #990202;
+    border-radius:0.4vh;
+    position: absolute;
+  top: 59vh;
+  left: 135vh;
+
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+    
+
+}
 .infoCat {
     color: white;
-    font-size: 18px;
-    margin: 0;
+    font-size: 2.1vh;
+    margin: 10px;
     text-align: center;
-    margin-right: 25%;
-
+    margin-left:10vh;
+    background: linear-gradient(360deg, #FF4F4F,#be0000,#ff0000 );
+    width:120vh;
+    height: max-content;
+    border: 0.2vh solid #FF4F4F;
 }
 
 .infoImg {
-    margin: 0;
-    margin-top: 70px;
-    margin-left: 25%;
-    height: 450px;
-    width: 450px;
+    margin: auto;
+    margin-left: 45vh;
+    height: 50vh;
+    width: 50vh;
     -webkit-box-shadow: 2px 0px 0px 0px #ff0000, 0px 2px 0px 0px #ff3700, -2px 0px 0px 0px #0000ff, 0px 0px 0px 2px #DA635D, 2px 2px 3px 2px #ff4f4f; 
     box-shadow: 2px 0px 0px 0px #ff0606, 0px 2px 0px 0px #990202, -2px 0px 0px 0px #FF4F4F, 0px 0px 0px 2px #DA635D, 2px 2px 3px 1px #ff4f4f;
-        border-radius: 2v2;
+        border-radius: 2vh;
 }
+.gob{width:5vh;
+height:5vh;
+margin:30px;
+margin-left:30vh;
+background-color: #DA635D;
+font-size: 2vh;
+font-weight: bold;
+border: 2px solid #990202;
+border-radius: 1px;}
+
+.gob1{width:5vh;
+    height:5vh;
+    margin:30px;
+    margin-left:30vh;
+    background-color: #DA635D;
+    font-size: 2vh;
+    font-weight: bold;
+    border: 2px solid #990202;
+    border-radius: 1px;}
+
+    .gob2{width:5vh;
+        height:5vh;
+        margin:30px;
+        margin-left:30vh;
+        background-color: #DA635D;
+        font-size: 2vh;
+        font-weight: bold;
+        border: 2px solid #990202;
+        border-radius: 1px;}
 
 /*/Forum/*/
 .forumCat {
-    margin-top: 5%;
-    margin-left: 0%;
+    margin:auto;
+    margin-top: 10vh;
     
-    border-radius: 5vh;
+    border-top-right-radius: 25%;
+    border-bottom-right-radius: 25%;
+    border-top-left-radius: 25%;
     border: 0.1vh solid #990202;
     
 }
@@ -68,11 +219,43 @@
     margin-top: 2vh;
     width: 100vh;
     height: 50px;
+    max-height: fit-content;
     font-size: 20px;
     border-radius: 2px;
-    -webkit-box-shadow: 4px 0px 0px 0px #ff0000, 0px 4px 0px 0px #B1938B, -8px 0px 0px 0px #4E4E56, 0px 0px 0px 8px #DA635D, 7px 7px 3px 5px #ff4f4f; 
-box-shadow: 4px 0px 0px 0px #ff0606, 0px 8px 0px 0px #990202, -4px 0px 0px 0px #FF4F4F, 0px 0px 0px 8px #DA635D, 7px 7px 3px 5px #ff4f4f;
+    border: 0.4vh solid #FF4F4F;
+    border-radius: 1vh;
+    text-align: center;
+    
 font-weight: bold;
+}
+.gridz-item{
+    background: rgb(195, 0, 0);
+    margin-left: 23vh;
+    margin-top: 2vh;
+    width: fit-content;
+    height: fit-content;
+    max-height: fit-content;
+    font-size: 20px;
+    border-radius: 2px;
+    border: 0.4vh solid #FF4F4F;
+    border-radius: 1vh;
+    text-align: center;
+
+}
+.gridz-item2{
+    background: rgb(195, 0, 0);
+    margin-left: 23vh;
+    margin-top: 2vh;
+    height:max-content;
+    max-width: max-content;
+    max-height: max-content;
+    
+    font-size: 20px;
+    border-radius: 2px;
+    border: 0.4vh solid #FF4F4F;
+    border-radius: 1vh;
+    text-align: left;
+
 }
 
 /*/ForumBtns/*/
@@ -81,11 +264,11 @@ font-weight: bold;
     height: 7vh;
     text-align: center;
     position: relative;
-    margin-left: 861px;
-    margin-top: -20px;
+    margin-left: 868px;
+    margin-top: -40px;
     font-size: 12px;
     color: rgb(255, 255, 255);
-    border: 0.5vh solid #DA635D;
+    border: 0.4vh solid #DA635D;
     border-bottom-left-radius: 2vh;
     font-weight: bold;
     background: #990202;

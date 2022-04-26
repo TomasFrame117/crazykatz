@@ -1,6 +1,5 @@
 function changePage(side) {
   model.app.currentPage = side;
-  model.app.innhold = "";
   updateView();
 }
 function logInUser() {
@@ -38,24 +37,80 @@ function NewUser() {
     (newUser.password = model.input.regInfo.regPassword),
     (newUser.password = model.input.regInfo.regConfirmPW),
     (newUser.chosenCat = model.input.regInfo.regSelectBreed),
-    model.userId++;
-  model.users.push(newUser);
+     model.userId++;
+     model.users.push(newUser);
 
-  //  model.app.currentPage = "homePage";
+//regInfo: {
+  //id: null,
+    //model.app.currentPage = "homePage";
   updateView();
 }
 
 function EditUser() {
   if(model.app.currentUserName == '') 
-  alert("Please enter a new user name")
+  alert("Vennligst skriv en ny bruker navn. ")
   if(model.input.regInfo.regPassword != model.input.regInfo.newPassword)
   {model.input.regInfo.regPassword == model.input.regInfo.newPassword}
   
-  alert('Password saved successfully')
-
- //  model.app.currentPage = "loginPage";
+  alert('Passordet har blitt lagret!')
    updateView();
 }
+
+function sortRatings() {
+  model.sortedList =[];
+  for (let i = 0; i < model.chooseCat.length; i++) {
+    let objekt = {}
+    objekt.id = model.chooseCat[i].id 
+    objekt.img = model.chooseCat[i].image
+    objekt.score = model.chooseCat[i].ratingInfo.totalrating
+    model.sortedList.push(objekt)
+  }
+  model.sortedList.sort(compareScore);
+}
+
+function compareScore( a, b )
+  {
+  if ( a.score > b.score){
+    return -1;
+  }
+  if ( a.score < b.score){
+    return 1;
+  }
+  return 0;
+}
+
+function rate1perUser(catImageId) {
+  // let usersWhoHaveRated = model.chooseCat.usersWhoHaveRated;
+  let currentUserID = model.app.currentUserID;
+  if(model.users[currentUserID-1].allreadyRated.includes(model.chooseCat[catImageId].id)){
+    alert("Du har allerede vurdert denne katten.")
+    return;
+  }
+    console.log ('already rated')
+    model.users[currentUserID-1].allreadyRated.push(model.chooseCat[catImageId].id);
+  // sjekke om bruker har allerede rata --> c
+  changePage('ratingsWindow')
+}
+
+function submitToForum() {
+  let output = model.input.output;
+  let textBox = model.input.forum.textBoxOne;
+  for (let index = 0; index < textBox.length; index++) {
+    if (textBox != '') {
+      output.push(textBox[index])}  
+  }
+  updateView();
+}
+function submitToForum2() {
+  let output = model.input.output;
+  let textBox = model.input.forum.textBoxTwo;
+  for (let index = 0; index < textBox.length; index++) {
+    if (textBox != '') {
+      output.push(textBox[index])}  
+  }
+  updateView();
+}
+
 /*/UploadBtn/*/
 function _(el) {
   return document.getElementById(el);
@@ -76,22 +131,23 @@ function uploadFile() {
   ajax.send(formdata);
 }
 
-function progressHandler(event) {
-  _("loaded_n_total").innerHTML = "Uploaded " + event.loaded + " bytes of " + event.total;
-  var percent = (event.loaded / event.total) * 100;
-  _("progressBar").value = Math.round(percent);
-  _("status").innerHTML = Math.round(percent) + "% uploaded... please wait";
+function progressHandler(event){
+	_("loaded_n_total").innerHTML = "Uploaded "+event.loaded+" bytes of "+event.total;
+	var percent = (event.loaded / event.total) * 100;
+	_("progressBar").value = Math.round(percent);
+	_("status").innerHTML = Math.round(percent)+"% uploaded... please wait";
 }
 
-function completeHandler(event) {
-  _("status").innerHTML = event.target.responseText;
-  _("progressBar").value = 0; //wil clear progress bar after successful upload
+
+function completeHandler(event){
+	_("status").innerHTML = event.target.responseText;
+	_("progressBar").value = 0;
+}
+function errorHandler(event){
+	_("status").innerHTML = "Upload Failed";
+}
+function abortHandler(event){
+	_("status").innerHTML = "Upload Aborted";
 }
 
-function errorHandler(event) {
-  _("status").innerHTML = "Upload Failed";
-}
 
-function abortHandler(event) {
-  _("status").innerHTML = "Upload Aborted";
-}

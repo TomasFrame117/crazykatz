@@ -1,0 +1,33 @@
+.forumtxt{
+    margin:auto;
+    left:18%;
+    top:6%;
+    position:relative;
+    border:2px solid #992209;
+    font-weight: bold;
+   
+}
+.sub{
+    margin:auto;
+    text-align:center;
+    width:7vh;
+    height:4vh;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 1vh;
+    left:-15%;
+    top:6.3%;
+    position:relative;
+    border:1px solid #992209;
+    color:white;
+    background-color:black;
+   
+}
+.frmjpg{
+width: fit-content;
+height:fit-content;
+position:absolute;
+left:75%;
+top:59%;
+border-radius: 35%;
+}

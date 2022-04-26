@@ -3,26 +3,27 @@ const model = {
   //app
   app: {
     currentPage: "homePage",
-    innhold: "",
     currentUserName: "",
     currentUserID: null,
+
   },
 
   //input
   input: {
     userLogin: "",
     userPassword: "",
-
+    
     regInfo: {
-      id: "",
+      id: null,
       regFirstName: "",
       regLastName: "",
       regMail: "",
       regPassword: "",
       regConfirmPW: "",
       regSelectBreed: "",
+    
     },
-
+    output: [],
     selectedCatId: null,
     calendar: {
       month: "",
@@ -31,7 +32,12 @@ const model = {
 
     forum: {
       search: "",
-      textBox: "",
+      textBoxOne: '',
+      textBoxTwo: '',
+      textBoxThree: '',
+      textBoxFour: '',
+      textBoxFive: '',
+      msg:[''],                       
     },
 
     upload: {
@@ -54,7 +60,9 @@ const model = {
     },
   },
   //data
-  images: [
+
+ sortedList:[],
+  images: 
     {
       NorskSkogKatt: [
         "https://www.zooplus.no/magasin/wp-content/uploads/2018/12/norsk-skogkatt-768x512.jpg",
@@ -74,9 +82,13 @@ const model = {
       Ragdoll: [
         "https://thumbs.dreamstime.com/b/awesome-ragdoll-cat-beautiful-cushion-adorable-ragdoll-cat-beautiful-cushion-172354412.jpg",
       ],
-      AddNewImg: [],
+      AddNewImg:[],
+      highestScore:[],
+      secondPlace:[],
+      thirdPlace:[],
+      scoreList : [],
     },
-  ],
+  
   events: [
     {
       id: 1,
@@ -113,23 +125,35 @@ const model = {
       allDay: false,
     },
   ],
-  userId: 3,
+  userId: null,
   users: [
+  
     {
       id: 1,
-      firstName: "Inga",
+      firstName: "Tomas",
       lastName: "Toppen",
       password: "1",
       mail: "1",
       chosenCat: 1,
+      allreadyRated:[],
     },
     {
       id: 2,
-      firstName: "Terje",
-      lastName: "Terje",
+      firstName: "Christian",
+      lastName: "Yo",
       password: "2",
       mail: "2",
       chosenCat: 2,
+      allreadyRated:[],
+    },
+    {
+      id: 3,
+      firstName: "Knut",
+      lastName: "Bergstrøm",
+      password: "12345678",
+      mail: "knut@mail.no",
+      chosenCat: 3,
+      allreadyRated:[],
     },
   ],
 
@@ -157,6 +181,7 @@ const model = {
       image: [
         "https://www.zooplus.no/magasin/wp-content/uploads/2018/12/norsk-skogkatt-768x512.jpg",
       ],
+      usersWhoHaveRated:[],
       ratingInfo: {
         rateTail: [], // gj.
         rateFur: [],
@@ -166,6 +191,7 @@ const model = {
         rateOverall: [],
         totalrating: 0,
         maxPoints: 100,
+          
       },
     },
     {
@@ -173,6 +199,7 @@ const model = {
       name: "Siameser",
       info: "Siameser er en middels stor, lang, slank katt, med en meget kort, fin pels uten underpels. Halen er lang og avsmalnende. Hodet smalner til snuten i rette linjer med lang rett nese. Øynene er blå.",
       image: ["https://indienikole.com/img/lifestyle/14/get-know-siamese.jpg"],
+      usersWhoHaveRated:[],
       ratingInfo: {
         rateTail: [],
         rateFur: [],
@@ -182,6 +209,7 @@ const model = {
         rateOverall: [],
         totalrating: 0,
         maxPoints: 100,
+         
       },
     },
     {
@@ -191,6 +219,7 @@ const model = {
       image: [
         "https://www.holidogtimes.com/wp-content/uploads/2018/03/american-curl-fi.png",
       ],
+      usersWhoHaveRated:[],
       ratingInfo: {
         rateTail: [],
         rateFur: [],
@@ -200,6 +229,7 @@ const model = {
         rateOverall: [],
         totalrating: 0,
         maxPoints: 100,
+        
       },
     },
     {
@@ -209,6 +239,7 @@ const model = {
       image: [
         "https://www.zooplus.no/magasin/wp-content/uploads/2018/11/maine-coon-768x658.jpg",
       ],
+      usersWhoHaveRated:[],
       ratingInfo: {
         rateTail: [],
         rateFur: [],
@@ -218,6 +249,7 @@ const model = {
         rateOverall: [],
         totalrating: 0,
         maxPoints: 100,
+         
       },
     },
     {
@@ -227,6 +259,7 @@ const model = {
       image: [
         "https://media.istockphoto.com/photos/lovable-scottish-fold-cat-picture-id467801366?k=20&m=467801366&s=612x612&w=0&h=FBdXfK4jt-jRzL8jpFbHHFOkMBobMHsGkpEDiDKCiGs=",
       ],
+      usersWhoHaveRated:[],
       ratingInfo: {
         rateTail: [],
         rateFur: [],
@@ -236,6 +269,9 @@ const model = {
         rateOverall: [],
         totalrating: 0,
         maxPoints: 100,
+           highestScore:[],
+      secondPlace:[],
+      thirdPlace:[],
       },
     },
     {
@@ -245,6 +281,7 @@ const model = {
       image: [
         "https://thumbs.dreamstime.com/b/awesome-ragdoll-cat-beautiful-cushion-adorable-ragdoll-cat-beautiful-cushion-172354412.jpg",
       ],
+      usersWhoHaveRated:[],
       ratingInfo: {
         rateTail: [],
         rateFur: [],
@@ -254,6 +291,9 @@ const model = {
         rateOverall: [],
         totalrating: 0,
         maxPoints: 100,
+           highestScore:[],
+      secondPlace:[],
+      thirdPlace:[],
       },
     },
   ],

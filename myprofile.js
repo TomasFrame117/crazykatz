@@ -4,21 +4,22 @@ function myProfile() {
           <div class="header">
           <h1 class="title">Min profil</h1>
           </div>
-              <div class="menu">${mainMenu()}
-              </div>
+              <div class="menu">${mainMenu()}</div>
   
       <div class="mainContent">
-      
-          <div class="profileContainar">
-              <h3 class="profTitle">Profilinformasjon</h3>
+      <div class="mainContent"><button class="logut" onclick="changePage('loginPage')">Logg ut</button>
+          
+      <div class="profileContainar">
+              <h3 class="profTitle">Profil informasjon</h3>
               
-              
-                  <input class="ab" type="text" onchange="model.app.currentUserName = this.value" placeholder="Fornavn:"/><br>
-                  <input class="cd" type="text" placeholder="Etternavn:"/><br>
-                   <input class="ef" type="text" placeholder="E-post:"/><br>
-                   <input class="gh" type="text" placeholder="Passord:"/><br>
-                   <input class="ij" type="text" placeholder="Gjenta Passord:"/> <br>
-                  <button class="edit" onclick="EditUser()">Rediger</button>
+                
+                  <input class="ab" type="text" onchange="model.app.currentUserName = this.value, model.input.regInfo.regFirstName = this.value" placeholder="${model.app.currentUserName}"/><br>
+                  <input class="cd" type="text" onchange="model.input.regInfo.regLastName = this.value" placeholder="Etternavn:"/><br>
+                   <input class="ef" type="text" onchange="model.input.regInfo.regMail = this.value" placeholder="E-post:"/><br>
+                   <input class="gh" type="password" onchange="model.input.regInfo.regPassword = this.value" placeholder="Passord:"/><br>
+                   <input class="ij" type="password" onchange="model.input.regInfo.regConfirmPW = this.value" placeholder="Gjenta Passord:"/> <br>
+                  <button class="edit" onclick="NewUser(); EditUser()">Rediger</button>
+                  
                   
                   <button class="legg" onclick="">Legg til profilbilde</button>
                   
@@ -29,7 +30,6 @@ function myProfile() {
                   </div>
                   
                   `;
-    // <button class="browse" onclick="">Browse</button><br>
   
     return html;
   }
